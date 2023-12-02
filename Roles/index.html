@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roles</title>
+    <link rel="stylesheet" href="/Roles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/Dashboard/img/Logo_alone.png" alt="">
+                    <h2>Jo<span class="danger">nia</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/Dashboard/index.html">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="/Roles/index.html" class="active">
+                    <span class="material-symbols-outlined">manage_accounts</span>
+                    <h3>Roles</h3>
+                </a>
+
+                <a href="/Usuarios/index.html">
+                    <span class="material-symbols-outlined">groups</span>
+                    <h3>Usuarios</h3>
+                </a>
+
+                <a href="/Habitaciones/index.html">
+                    <span class="material-symbols-outlined">bedroom_parent</span>
+                    <h3>Habitaciones</h3>
+                </a>
+
+                <a href="/Servicios/index.html">
+                    <span class="material-symbols-outlined">linked_services</span>
+                    <h3>Servicios</h3>
+                </a>
+
+                <a href="/Paquetes/index.html">
+                    <span class="material-symbols-outlined">package_2</span>
+                    <h3>Paquetes</h3>
+                </a>
+
+                <a href="/Clientes/index.html">
+                    <span class="material-symbols-outlined">face</span>
+                    <h3>Clientes</h3>
+                </a>
+
+                <a href="/Reserva/index.html">
+                    <span class="material-symbols-outlined">edit_calendar</span>
+                    <h3>Reservas</h3>
+                </a>
+
+                <a href="/Hospedaje/index.html">
+                    <span class="material-symbols-outlined">night_shelter</span>
+                    <h3>Hospedaje</h3>
+                </a>
+
+                <a href="/Login/index.html">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Roles</h1>
+            <div class="search-container">
+                <form action="#" method="get">
+                    <input type="text" placeholder="Buscar..." name="search">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            <div class="icon-container">
+                <a href="/Roles/Crear_Rol/index.html">
+                    <span class="material-symbols-outlined">add_circle</span>
+                    <h3>Crear Rol</h3>
+                </a>
+            </div>
+            <div class="recent-orders">                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>IdRol</th>
+                            <th>Nombre Rol</th>
+                            <th>Permisos</th>
+                            <th>Estado</th>
+                            <th>Operaciones</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Cliente</td>
+                            <td>Producto-Cliente</td>
+                            <td class="warning">Inactivo</td>
+                            <td class="warning">inhabilitada</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Admin</td>
+                            <td>Roles-Usuario-Insumos-Provedor-...</td>
+                            <td class="primary">Activo</td>
+                            <td class="primary">Disponible</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#" style="color: black;">Mostrar todos</a>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Feeder4000</b></p>
+                        <small text-muted>Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/Dashboard/img/photo-profile.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

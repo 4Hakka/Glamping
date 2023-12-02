@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="/Clientes/Registro_Cliente/styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="container">
+    <aside>
+        <div class="top">
+            <div class="logo">
+                <img src="../Dashboard/img/Logo_alone.png" alt="">
+                <h2>Jo<span class="danger">nia</span></h2>
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-symbols-outlined">close</span>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <a href="../Dashboard/index.html">
+                <span class="material-symbols-outlined">grid_view</span>
+                <h3>Dashboard</h3>
+            </a>
+
+            <a href="/Roles/index.html">
+                <span class="material-symbols-outlined">manage_accounts</span>
+                <h3>Roles</h3>
+            </a>
+
+            <a href="/Usuarios/index.html">
+                <span class="material-symbols-outlined">groups</span>
+                <h3>Usuarios</h3>
+            </a>
+
+            <a href="../Habitaciones/index.html">
+                <span class="material-symbols-outlined">bedroom_parent</span>
+                <select id="habitaciones" class="habitaciones">
+                    <option value="0">Habitaciones</option>
+                    <option value="1">Ver Habitaciones</option>
+                    <option value="2">Tipo de Habitacion</option>
+                </select>
+            </a>
+
+            <script>
+                document.getElementById('habitaciones').addEventListener('change', function () {
+                    var seleccion = this.value;
+                    if (seleccion === '1') {
+                        window.location.href = '/Habitaciones/index.html';
+                    } else if (seleccion === '2') {
+                        window.location.href = '/Tipo_Habitaciones/index.html';
+                    }
+                });
+            </script>
+
+            <a href="/Servicios/index.html">
+                <span class="material-symbols-outlined">linked_services</span>
+                <h3>Servicios</h3>
+            </a>
+
+            <a href="/Paquetes/index.html">
+                <span class="material-symbols-outlined">package_2</span>
+                <h3>Paquetes</h3>
+            </a>
+
+            <a href="/Clientes/index.html" class="active">
+                <span class="material-symbols-outlined">face</span>
+                <h3>Clientes</h3>
+            </a>
+
+            <a href="/Reserva/index.html">
+                <span class="material-symbols-outlined">edit_calendar</span>
+                <h3>Reservas</h3>
+            </a>
+
+            <a href="/Hospedaje/index.html">
+                <span class="material-symbols-outlined">night_shelter</span>
+                <h3>Hospedaje</h3>
+            </a>
+
+            <a href="/Login/index.html">
+                <span class="material-symbols-outlined">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
+
+    <main>
+        <div class="container2">
+        <div class="left">
+            <form action="">
+                <div>
+                    <label for="">Tipo de documento:</label>
+                    <select name="Tipo" id="">
+                        <option value="">CC</option>
+                        <option value="">EX</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Nro Documento: </label>
+                    <input type="number" name="" id="" style="width: 135px;">
+                </div>
+                <div>
+                    <label for="">Nombres: </label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">Apellidos: </label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">Teléfono: </label>
+                    <input type="number" style="margin-left: 10px;">
+                </div>
+                <div>
+                    <label for="">Dirección: </label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">País: </label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">Ciudad: </label>
+                    <input type="text">
+                </div>
+            </form>
+            <form action="">
+                <label for=""></label>
+            </form>
+        </div>
+        <div class="v-line">
+        </div>
+        <h1>Registro Clientes</h1>
+        <div class="rightt">
+            <form action="">
+                <div>
+                    <label for="">Correo: </label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">Confirmar Correo: </label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">Contraseña: </label>
+                    <input type="password" style="margin-left: 10px;">
+                </div>
+                <div>
+                    <label for="">Confirmar contraseña: </label>
+                    <input type="text">
+                </div>
+                <div>
+                    <button class="cancelar">Cancelar</button>
+                    <button class="guardar">Guardar</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </main>
+
+    
+    <div class="right">
+        <div class="top">
+            <button id="menu-btn">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div class="profile">
+                <div class="info">
+                    <p>Hey, <b>Feeder4000</b></p>
+                    <small text-muted>Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="/Dashboard/img/photo-profile.jpg" alt="">
+                </div>
+            </div>
+        </div>
+</div>
+
+
+</body>
+</html>

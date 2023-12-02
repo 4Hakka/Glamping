@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/Habitaciones/Tipo_Habitaciones/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+     <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/Dashboard/img/Logo_alone.png" alt="">
+                    <h2>Jo<span class="danger">nia</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="/Dashboard/index.html">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="/Roles/index.html">
+                    <span class="material-symbols-outlined">manage_accounts</span>
+                    <h3>Roles</h3>
+                </a>
+
+                <a href="/Usuarios/index.html">
+                    <span class="material-symbols-outlined">groups</span>
+                    <h3>Usuarios</h3>
+                </a>
+
+                <a href="/Habitaciones/index.html" class="active">
+                    <span class="material-symbols-outlined">bedroom_parent</span>
+                    <select id="habitaciones" class="habitaciones">
+                        <option value="1">Habitaciones</option>
+                        <option value="2">Tipo de Habitacion</option>
+                    </select>
+                </a>
+                
+                <script>
+                    document.getElementById('habitaciones').addEventListener('change', function() {
+                        var seleccion = this.value;
+                        if (seleccion === '1') {
+                            window.location.href = '/Habitaciones/index.html';
+                        } else if (seleccion === '2') {
+                            window.location.href = '/Tipo_Habitaciones/index.html';
+                        }
+                    });
+                </script>
+                
+                <a href="/Servicios/index.html">
+                    <span class="material-symbols-outlined">linked_services</span>
+                    <h3>Servicios</h3>
+                </a>
+
+                <a href="/Paquetes/index.html">
+                    <span class="material-symbols-outlined">package_2</span>
+                    <h3>Paquetes</h3>
+                </a>
+
+                <a href="/Clientes/index.html">
+                    <span class="material-symbols-outlined">face</span>
+                    <h3>Clientes</h3>
+                </a>
+
+                <a href="/Reserva/index.html">
+                    <span class="material-symbols-outlined">edit_calendar</span>
+                    <h3>Reservas</h3>
+                </a>
+
+                <a href="/Hospedaje/index.html">
+                    <span class="material-symbols-outlined">night_shelter</span>
+                    <h3>Hospedaje</h3>
+                </a>
+
+                <a href="/Login/index.html">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+            <main>
+
+                <h1>Tipo de Habitaciones</h1>
+    
+                <div class="recent-orders">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>IdTipoHab</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Edit</th>
+                                <th>Img</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>100</td>
+                                <td>Individual</td>
+                                <td>50000</td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">edit</span></a>
+                                </td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">image</span></a>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>101</td>
+                                <td>Doble</td>
+                                <td>100000</td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">edit</span></a>
+                                </td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">image</span></a>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>102</td>
+                                <td>Cuadriple</td>
+                                <td>400000</td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">edit</span></a>
+                                </td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">image</span></a>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>103</td>
+                                <td>Octal</td>
+                                <td>800000</td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">edit</span></a>
+                                </td>
+                                <td>
+                                    <a href=""><span class="material-symbols-outlined">image</span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="#" class="show_all">Mostrar todos</a>
+
+                <div class="crear_habitacion">
+
+                    <h2 class="h2">Nuevo / Editar</h2>
+
+                    <form action="">
+
+                        <h2 class="h2_new_hab">Nombre</h2>
+                        <select type="str" class="tipo_hab">
+                            <option value="1">Individual</option>
+                            <option value="2">Doble</option>
+                            <option value="3">Cuadruple</option>
+                            <option value="4">Octal</option>
+                        </select>
+                        <hr class="hr2">
+
+                        <h2 class="h1_new_per">Precio</h2>
+                        <input type="number" class="precio_hab">
+                        <hr class="hr4">
+    
+                        <h2 class="h4_new_hab">Nro. Personas</h2>
+                        <input type="int" class="nro_per">
+                        <hr class="hr1">
+
+                        <h2 class="h3_new_hab">Estado</h2>
+                        <select type="str" class="estado_hab">
+                            <option value="1">Disponible</option>
+                            <option value="2">Inhabilitada</option>
+                        </select>
+                        <hr class="hr3">
+    
+                    </form>
+                </div>
+
+                <input type="submit" value="Guardar" class="guardar">
+                <input type="submit" value="Cancelar" class="cancelar">
+
+            </main>
+
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>Feeder4000</b></p>
+                            <small text-muted>Admin</small>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="/Dashboard/img/photo-profile.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospedaje</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="/Hospedaje/styles.css">
+    
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+            <div class="logo">
+                <img src="../Dashboard/img/Logo_alone.png" alt="">
+                <h2>Jo<span class="danger">nia</span></h2>
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-symbols-outlined">close</span>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <a href="/Dashboard/index.html">
+                <span class="material-symbols-outlined">grid_view</span>
+                <h3>Dashboard</h3>
+            </a>
+
+            <a href="/Roles/index.html">
+                <span class="material-symbols-outlined">manage_accounts</span>
+                <h3>Roles</h3>
+            </a>
+
+            <a href="/Usuarios/index.html">
+                <span class="material-symbols-outlined">groups</span>
+                <h3>Usuarios</h3>
+            </a>
+
+            <a href="/Habitaciones/index.html">
+                <span class="material-symbols-outlined">bedroom_parent</span>
+                <select id="habitaciones" class="habitaciones">
+                    <option value="1">Habitaciones</option>
+                    <option value="2">Tipo de Habitacion</option>
+                </select>
+            </a>
+
+            <script>
+                document.getElementById('habitaciones').addEventListener('change', function () {
+                    var seleccion = this.value;
+                    if (seleccion === '1') {
+                        window.location.href = '/Habitaciones/index.html';
+                    } else if (seleccion === '2') {
+                        window.location.href = '/Tipo_Habitaciones/index.html';
+                    }
+                });
+            </script>
+
+            <a href="/Servicios/index.html">
+                <span class="material-symbols-outlined">linked_services</span>
+                <h3>Servicios</h3>
+            </a>
+
+            <a href="/Paquetes/index.html">
+                <span class="material-symbols-outlined">package_2</span>
+                <h3>Paquetes</h3>
+            </a>
+
+            <a href="/Clientes/index.html">
+                <span class="material-symbols-outlined">face</span>
+                <h3>Clientes</h3>
+            </a>
+
+            <a href="/Reserva/index.html">
+                <span class="material-symbols-outlined">edit_calendar</span>
+                <h3>Reservas</h3>
+            </a>
+
+            <a href="/Hospedaje/index.html" class="active">
+                <span class="material-symbols-outlined">night_shelter</span>
+                <h3>Hospedaje</h3>
+            </a>
+
+            <a href="/Login/index.html">
+                <span class="material-symbols-outlined">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
+
+      <div class="right">
+        <div class="top">
+          <button id="menu-btn">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <div class="profile">
+            <div class="info">
+              <p>Hey, <b>Feeder4000</b></p>
+              <small text-muted>Admin</small>
+            </div>
+            <div class="profile-photo">
+              <img src="/Dashboard/img/photo-profile.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <main>
+          <div class="recent-orders">
+            <h2>Servicios de Hospedaje</h2>
+            <!-- <h3>Nuevo Hospedaje</h3> -->
+            <div class="nuevo-hospedaje">
+              <div class="buscar">
+                <input type="search" placeholder="Buscar">
+              </div>
+              <a href="/Hospedaje/Registro_Hospedaje/index.html">
+                <!-- <span class="material-symbols-outlined"></span> -->
+                <span class="material-symbols-outlined">add</span>
+                <h3>Nuevo Hospedaje</h3>
+              </a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                      <th>&nbsp;IdHospedaje&nbsp;</th>
+                      <th>&nbsp;&nbsp;Cliente&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                      <th>Tip. Doc</th>
+                      <th>Nro. Documento</th>
+                      <th>No. Reserva</th>
+                      <th>Fecha Reserva</th>
+                      <th>Fecha Inicio</th>
+                      <th>Fecha Fin</th>
+                      <th>Nro. Persona</th>
+                      <th>Total</th>
+                      <th>Pago Anticipado</th>
+                      <th>Estado</th>
+                      <th>Operaciones</th>
+                      <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>001</td>
+                      <td>Maria Anders</td>
+                      <td>CC</td>
+                      <td>1199567891</td>
+                      <td>101</td>
+                      <td>11/02/2023</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                      <td class="warning">Pendiente</td>
+                      <td class="primary">Detalles</td>
+                    </tr>
+
+                    <tr>
+                      <td>002</td>
+                      <td>Maria Anders</td>
+                      <td>CC</td>
+                      <td>2536728903</td>
+                      <td>102</td>
+                      <td>11/05/2023</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                      <td class="warning">Pendiente</td>
+                      <td class="primary">Detalles</td>
+                    </tr>
+
+                    <tr>
+                      <td>003</td>
+                      <td>Maria Anders</td>
+                      <td>CC</td>
+                      <td>6789278463</td>
+                      <td>103</td>
+                      <td>21/12/2023</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                      <td class="warning">Pendiente</td>
+                      <td class="primary">Detalles</td>
+                    </tr>
+
+                    <tr>
+                      <td>004</td>
+                      <td>Maria Anders</td>
+                      <td>CC</td>
+                      <td>7829740274</td>
+                      <td>104</td>
+                      <td>19/09/2023</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                      <td style="color:green;">Pago</td>
+                      <td class="primary">Detalles</td>
+                    </tr>
+
+                    <tr>
+                      <td>005</td>
+                      <td>Maria Anders</td>
+                      <td>CC</td>
+                      <td>73989163452</td>
+                      <td>105</td>
+                      <td>01/06/2023</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Alfreds Futterkiste</td>
+                      <td>Maria Anders</td>
+                      <td>Germany</td>
+                      <td>Germany</td>
+                      <td style="color:green;">Pago</td>
+                      <td class="primary">Detalles</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <a href="#" style="color: black;">Mostrar todos</a>
+        </div>
+      </main>
+
+  </body>
+</html>
